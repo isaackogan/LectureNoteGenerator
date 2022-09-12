@@ -144,7 +144,7 @@ class NoteGenerator(BaseGUI):
         """
 
         # Add Title
-        canvas = tk.Canvas(self.root, width=400, height=160)
+        canvas = tk.Canvas(self.root, width=400, height=150)
         canvas.create_text(200, 115, text="Lecture Note Generator", fill="black", font='Helvetica 25 bold')
 
         # Filepath Label
