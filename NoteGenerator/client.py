@@ -17,7 +17,7 @@ class NoteGenerator(BaseGUI):
         super().__init__(width=800, height=500)
 
         # Set up GUI
-        self.root.title("Lecture Slide Generator")
+        self.root.title("Lecture Note Generator")
         self.root.iconbitmap()
 
         # Declarations
@@ -145,7 +145,7 @@ class NoteGenerator(BaseGUI):
 
         # Add Title
         canvas = tk.Canvas(self.root, width=400, height=150)
-        canvas.create_text(200, 50, text="\n\n\nLecture Slide Generator", fill="black", font='Helvetica 25 bold')
+        canvas.create_text(200, 50, text="\n\n\nLecture Note Generator", fill="black", font='Helvetica 25 bold')
 
         # Filepath Label
         filepath_frame = tk.Frame(self.root, width=400)
