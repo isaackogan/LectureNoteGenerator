@@ -4,21 +4,11 @@ Note generator for the purpose of converting lecture slide PDFs to lined/grid/bl
 
 ## Downloads
 
-- [Windows (Executable File)](bin/Note%20Generator.exe)
-- [MacOS]()
+- [Windows Executable (exe)](bin/Note%20Generator.exe)
+- [MacOS App (tar.gz)](bin/Note%20Generator.tar.gz)
+
+If your operating system is not listed here, good luck.
 
 ## Generating Executables
 
-### Windows
-
 `pyinstaller --onefile --noconsole ./NoteGenerator/client.py --name="Note Generator"`
-
-### MacOs
-
-`...`
-
-### Linux
-
-`...`
-
-If your operating system is not listed here, good luck.
