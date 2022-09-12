@@ -1,0 +1,4 @@
+Pillow~=9.2.0
+reportlab~=3.6.11
+PyPDF2~=2.10.6
+pymupdf
