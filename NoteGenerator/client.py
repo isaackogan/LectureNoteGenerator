@@ -144,8 +144,8 @@ class NoteGenerator(BaseGUI):
         """
 
         # Add Title
-        canvas = tk.Canvas(self.root, width=400, height=150)
-        canvas.create_text(200, 50, text="\n\n\nLecture Note Generator", fill="black", font='Helvetica 25 bold')
+        canvas = tk.Canvas(self.root, width=400, height=160)
+        canvas.create_text(200, 115, text="Lecture Note Generator", fill="black", font='Helvetica 25 bold')
 
         # Filepath Label
         filepath_frame = tk.Frame(self.root, width=400)
@@ -180,7 +180,7 @@ class NoteGenerator(BaseGUI):
         self.file_convert_button["state"] = "disabled"
 
         # Pack Title
-        canvas.pack(ipady=10)
+        canvas.pack()
 
         # Pack Input Label
         label_text.pack(side=tk.LEFT)
