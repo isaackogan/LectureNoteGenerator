@@ -11,7 +11,7 @@ If your operating system is not listed here, good luck.
 
 ## Preview
 
-[!Preview](https://i.imgur.com/30byrUX.png/)
+![Preview](https://i.imgur.com/30byrUX.png/)
 
 ## Generating Executables
 
