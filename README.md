@@ -9,6 +9,11 @@ Note generator for the purpose of converting lecture slide PDFs to lined/grid/bl
 
 If your operating system is not listed here, good luck.
 
+## Preview
+
+[!Preview](https://i.imgur.com/30byrUX.png/)
+
 ## Generating Executables
 
 `pyinstaller --onefile --noconsole ./NoteGenerator/client.py --name="Note Generator"`
+
