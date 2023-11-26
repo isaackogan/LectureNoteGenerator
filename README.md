@@ -15,5 +15,5 @@ If your operating system is not listed here, good luck.
 
 ## Generating Executables
 
-`pyinstaller --onefile --noconsole ./NoteGenerator/client.py --name="Note Generator"`
+`pyinstaller --onefile --noconsole ./AnnotateGenerator/app.py --name="Note Generator"`
 
