@@ -4,8 +4,8 @@ Note generator for the purpose of converting lecture slide PDFs to lined/grid/bl
 
 ## Downloads
 
-- [Windows Executable (exe)](bin/Note%20Generator.exe)
-- [MacOS App (tar.gz)](bin/Note%20Generator.tar.gz)
+- [Windows Executable (.exe)](bin/Note%20Generator.exe)
+- [MacOS App (.app.zip)](bin/Note%20Generator.app.zip)
 
 If your operating system is not listed here, good luck.
 
