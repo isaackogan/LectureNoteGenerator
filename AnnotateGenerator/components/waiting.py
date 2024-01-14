@@ -11,7 +11,7 @@ from AnnotateGenerator.components.path import PathWidgetContainer
 class ProcessingDialog(QDialog):
     def __init__(self, parent=None, title: str = "Modal"):
         super(ProcessingDialog, self).__init__(parent)
-        self.setModal(True)  # Make the dialog modal
+        self.setModal(False)  # Modal = Can you interact with main screen while loaded
         self.setWindowTitle(title)
         self.label = QLabel("Processing... Please wait", self)
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)

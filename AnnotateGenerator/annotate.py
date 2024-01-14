@@ -19,7 +19,7 @@ class LayoutRule(enum.Enum):
 
 def export_image(image: Image) -> ImageReader:
     side_im_data = io.BytesIO()
-    image.save(side_im_data, format='png')
+    image.save(side_im_data, format='jpeg', optimize=True)
     side_im_data.seek(0)
     return ImageReader(side_im_data)
 
@@ -80,6 +80,8 @@ class AnnotatedPDFGenerator(QThread):
             filename=self.op,
             pagesize=(self.PAGE_WIDTH, self.PAGE_HEIGHT)
         )
+
+        new_pdf.setPageCompression(1)
 
         for im1, im2 in self.pdf_pages():
 

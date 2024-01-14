@@ -1,12 +1,8 @@
-import logging
 import random
-import traceback
-from typing import Tuple
 
-from PyQt6.QtCore import Qt, QSize, pyqtSlot, QDir
+from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel, QComboBox, QFileDialog
-from PyQt6.uic.properties import QtGui
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel, QFileDialog
 
 from AnnotateGenerator.annotate import AnnotatedPDFGenerator
 from AnnotateGenerator.components.combo import ComboWidgetContainer
@@ -15,13 +11,11 @@ from AnnotateGenerator.components.waiting import ProcessingDialog, FinishedDialo
 
 
 class AnnotateApp(QMainWindow):
-
     APP_TITLE: str = "Lecture Note Generator"
     APP_WIDTH, APP_HEIGHT = 800, 500
     BUTTON_SIZE: QSize = QSize(200, 60)
 
     def center(self):
-
         qr = self.frameGeometry()
         cp = self.screen().availableGeometry().center()
         qr.moveCenter(cp)
@@ -88,7 +82,6 @@ class AnnotateApp(QMainWindow):
         return label
 
     def select_button_click(self):
-
         i_path, _ = QFileDialog.getOpenFileName(self, "Select File")
         o_path: str = i_path.replace(".pdf", f" (Gen-{random.randint(1000, 9000)}).pdf")
 
@@ -102,11 +95,11 @@ class AnnotateApp(QMainWindow):
         self.processing_dialog.show()
 
         generator: AnnotatedPDFGenerator = AnnotatedPDFGenerator(
-                parent=self,
-                input_fp=self.input_path.value,
-                output_fp=self.output_path.value,
-                layout=self.format_combo.value
-            )
+            parent=self,
+            input_fp=self.input_path.value,
+            output_fp=self.output_path.value,
+            layout=self.format_combo.value
+        )
 
         generator.finished.connect(self.generate_finished)
         generator.start()
