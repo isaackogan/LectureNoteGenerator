@@ -82,7 +82,7 @@ class AnnotateApp(QMainWindow):
         return label
 
     def select_button_click(self):
-        i_path, _ = QFileDialog.getOpenFileName(self, "Select File")
+        i_path, _ = QFileDialog.getOpenFileName(self, "Select File", filter="PDF Files (*.pdf)")
         o_path: str = i_path.replace(".pdf", f" (Gen-{random.randint(1000, 9000)}).pdf")
 
         self.input_path.update(i_path)
