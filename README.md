@@ -16,6 +16,6 @@ If your operating system is not listed here, good luck.
 ## Generating Executables
 
 ```bash
-pyinstaller --onefile --noconsole ./AnnotateGenerator/app.py --name="Note Generator" --icon="./icon/icon.png"
+pyinstaller --onefile --noconsole ./AnnotateGenerator/app.py --name="Note Generator" --icon="./AnnotateGenerator/icon.png"
 ```
 
