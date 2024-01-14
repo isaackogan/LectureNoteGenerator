@@ -1,9 +1,9 @@
 import os
 import subprocess
+import sys
 
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QDialog, QLabel, QProgressBar, QVBoxLayout, QDialogButtonBox, QPushButton, QHBoxLayout, \
-    QWidget
+from PyQt6.QtWidgets import QDialog, QLabel, QProgressBar, QVBoxLayout, QPushButton, QWidget
 
 from AnnotateGenerator.components.path import PathWidgetContainer
 
@@ -74,11 +74,13 @@ class FinishedDialog(QDialog):
         self.startfile(self.og_fp)
 
     @classmethod
-    def startfile(cls, filename):
-        try:
-            os.startfile(filename)
-        except:
-            subprocess.Popen(['xdg-open', filename])
+    def startfile(cls, file_path):
 
-
-
+        if sys.platform == "win32":
+            os.startfile(file_path)
+        elif sys.platform == "darwin":
+            subprocess.call(["open", file_path])
+        elif sys.platform == "linux":
+            subprocess.call(["xdg-open", file_path])
+        else:
+            raise OSError("No tool found")
