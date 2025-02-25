@@ -3,3 +3,4 @@ reportlab~=3.6.11
 PyMuPDF==1.23.6
 pyqt6
 pyinstaller
+python-pptx

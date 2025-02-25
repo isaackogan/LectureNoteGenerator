@@ -1,5 +1,4 @@
 build
+bin
 dist
-venv
 .idea
-*.spec
