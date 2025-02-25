@@ -19,3 +19,11 @@ If your operating system is not listed here, good luck.
 pyinstaller --onefile --noconsole ./AnnotateGenerator/app.py --name="Note Generator" --icon="./AnnotateGenerator/icon.png"
 ```
 
+## PPTX to PDF on MacOS
+
+This application only accepts PDFs. I use a MacBook. 
+
+You can use an AppleScript to convert PPTX to PDF easily.
+
+Follow the instructions [here](https://github.com/jeongwhanchoi/convert-ppt-to-pdf/blob/master/README.md).
+
